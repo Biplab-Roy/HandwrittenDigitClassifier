@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='index.css') }} ">
+    <title>Recognizer</title>
+</head>
+
+<body>
+    <div class="row" style="height: 40vh;">
+        <div class="col-sm-12 my-auto" style="text-align: center;">
+            <p class="about">
+                Handwritten digit recognizer ML model build with tensorflow, keras, love and dedication.
+                Model has accuracy of 99.81% on test data and 99.92% on train data.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 my-auto">
+            <div class="container" style="padding: 0 10%; text-align: center;">
+                <input id="strokeSlider" name="slider" class="slider" type="range" value=25 min="0" max="30"
+                    style="margin-bottom: 20px;visibility: hidden;">                       
+                <label for="slider" id="lfs" style="visibility: hidden;">16</label>
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Result</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Your Prediction will appear here</h5>
+                        <p class="card-text" style="font-weight: bolder; font-size: larger;" id="output">[Number]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 my-auto" style="padding: 0 10%;">
+            <div id="canvasDiv">
+            </div>
+            <button id="btn" type="submit" class="btn btn-primary btn-lg" style="margin: 20px;">Predict</button>
+            <button id="clear" type="button" class="btn btn-secondary btn-lg" style="margin: 20px;">Clear</button>
+        </div>
+    </div>
+    <div class="row fl">
+        <div class="col cent">
+            <p>Contact Developer</p>
+        </div>
+    </div>
+    <div class="row fl" style="height: 70px;">
+        <div class="col cent">
+            <a href="https://www.facebook.com/profile.php?id=100008888882996"><img
+                    src="{{ url_for('static', filename='images/facebook.png') }}" alt="facebook" class="icon"></a>
+        </div>
+        <div class="col cent">
+            <a href="https://www.instagram.com/roybiplabofficial/"><img
+                    src="{{ url_for('static', filename='images/instagram-512.png') }}" alt="instagram" class="icon"></a>
+        </div>
+        <div class="col cent">
+            <a href="https://www.linkedin.com/in/biplab-roy-4b63b316a/"><img
+                    src="{{ url_for('static', filename='images/linkedin.png') }}" alt="linkedin" class="icon"></a>
+        </div>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="{{ url_for('static',filename='index.js') }}"></script>
+<style>
+    body {
+        overflow-x: hidden;
+        background-color: #a9cbee;
+    }
+
+    .about {
+        font-size: larger;
+        font-family: cursive;
+        text-align: center;
+        font-style: bold;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .icon {
+        height: 50px;
+        width: 50px;
+        margin-top: 10px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .icon {
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    .cent {
+        text-align: center;
+        font-size: large;
+        color: white;
+        font-weight: bold;
+    }
+
+    .contact {
+        text-align: center;
+        color: white;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .fl {
+        background-color: black;
+        opacity: 0.7;
+        text-align: center;
+    }
+</style>
+
+</html>

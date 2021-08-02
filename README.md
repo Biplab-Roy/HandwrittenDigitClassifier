@@ -1,1 +1,1 @@
-# HandwrittenDigitClassifier
+# -HandwrittenDigitRecognizer
