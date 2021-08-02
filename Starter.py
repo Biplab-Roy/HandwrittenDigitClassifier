@@ -11,6 +11,7 @@ import os
 sys.path.append(os.path.abspath('./model'))
 from load import *
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'e33166cbb4feeeac1bb7d2c7257b44c5'
 
 global model, graph
 model, graph = load_model()
