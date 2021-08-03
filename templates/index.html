@@ -13,12 +13,48 @@
 </head>
 
 <body>
-    <div class="row" style="height: 40vh;">
+    <div class="row">
         <div class="col-sm-12 my-auto" style="text-align: center;">
             <p class="about">
-                Handwritten digit recognizer ML model build with tensorflow, keras, love and dedication.
-                Model has accuracy of 99.81% on test data and 99.92% on train data.
+                <h2>sample images</h2>
             </p>
+            <img src="{{ url_for('static', filename='images/0.png') }}" height="150px" width="150px"/>
+            <img src="{{ url_for('static', filename='images/1.png') }}" height="150px" width="150px"/>
+            <img src="{{ url_for('static', filename='images/2.png') }}" height="150px" width="150px"/>
+            <img src="{{ url_for('static', filename='images/3.png') }}" height="150px" width="150px"/>
+            <img src="{{ url_for('static', filename='images/4.png') }}" height="150px" width="150px"/>
+            <br>
+            <img src="{{ url_for('static', filename='images/5.png') }}" height="150px" width="150px"/>
+            <img src="{{ url_for('static', filename='images/6.png') }}" height="150px" width="150px"/>
+            <img src="{{ url_for('static', filename='images/7.png') }}" height="150px" width="150px"/>
+            <img src="{{ url_for('static', filename='images/8.png') }}" height="150px" width="150px"/>
+            <img src="{{ url_for('static', filename='images/9.png') }}" height="150px" width="150px"/>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 my-auto">
+            <div class="container" style="padding: 0 10%;">
+                <h5>Dataset and Preprocessing</h5>
+                <ul>
+                    <li>Popular Mnist dataset is used for the model</li>
+                    <li>Total training sample: 60000</li>
+                    <li>Data augmentation(Random Zoom and Random Rotation) applied on the training data</li>
+                    <li>After data augmentation total samples 120000</li>
+                    <li><a href="https://github.com/Biplab-Roy/HandwrittenDigitClassifier/blob/main/model/DigitRecognizer.ipynb">Link to notebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 my-auto">
+            <div class="container" style="padding: 0 10%;">
+                <h5>Model training and testing</h5>
+                <ul>
+                    <li>Model is trained on a CNN architecture</li>
+                    <li>Model achieved 99.67% accuracy in training data</li>
+                    <li>Model achieved 99.35% accuracy in test data</li>
+                    <li><a href="https://github.com/Biplab-Roy/HandwrittenDigitClassifier/blob/main/model/DigitRecognizer.ipynb">Link to notebook</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="row">
