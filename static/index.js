@@ -81,7 +81,7 @@ button.addEventListener('click', function (e) {
     jd = {'url':dataURL}
     $.ajax({
         type: "POST",
-        url: "http://handwrittendigitrecognizer.herokuapp.com/predict",
+        url: "https://handwrittendigitrecognizer.herokuapp.com/predict",
         data: JSON.stringify(jd),
         dataType: 'json'
     }).done(function (data){
